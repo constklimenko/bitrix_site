@@ -31,7 +31,7 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
 
 <?
 global $trendFilter;
-$trendFilter = array('PROPERTY_TREND' => '#TREND_PROPERTY_VALUE_ID#');
+$trendFilter = array('PROPERTY_TREND' => '4');
 ?>
 <h2>Тренды сезона</h2>
 <?$APPLICATION->IncludeComponent(
@@ -39,7 +39,7 @@ $trendFilter = array('PROPERTY_TREND' => '#TREND_PROPERTY_VALUE_ID#');
 	"bootstrap_v4",
 	array(
 		"IBLOCK_TYPE_ID" => "catalog",
-		"IBLOCK_ID" => "#CATALOG_IBLOCK_ID#",
+		"IBLOCK_ID" => "2",
 		"BASKET_URL" => "/personal/cart/",
 		"COMPONENT_TEMPLATE" => "",
 		"IBLOCK_TYPE" => "catalog",

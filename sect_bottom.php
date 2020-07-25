@@ -49,7 +49,7 @@
 			"bootstrap_v4",
 			array(
 				"IBLOCK_TYPE" => "news",
-				"IBLOCK_ID" => "#NEWS_IBLOCK_ID#",
+				"IBLOCK_ID" => "1",
 				"NEWS_COUNT" => "3",
 				"SORT_BY1" => "ACTIVE_FROM",
 				"SORT_ORDER1" => "DESC",
