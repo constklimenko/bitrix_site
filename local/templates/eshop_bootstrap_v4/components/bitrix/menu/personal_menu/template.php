@@ -21,7 +21,7 @@ if (empty($arResult))
 <nav class="list-group mb-3 sbx-<?=$theme?>">
 	<?foreach($arResult as $itemIdex => $arItem):?>
 		<?if ($arItem["DEPTH_LEVEL"] == "1"):?>
-			<a class="list-group-item list-group-item-action<?=($arItem["SELECTED"]) ? " active" : "" ;?>" href="<?=htmlspecialcharsbx($arItem["LINK"])?>"><?=htmlspecialcharsbx($arItem["TEXT"])?></a>
+			<a class="list-group-item list-group-item-action<?=($arItem["SELECTED"]) ? " active" : "" ;?>" href="<?=htmlspecialcharsbx($arItem["LINK"])?>"> <?=htmlspecialcharsbx($arItem["TEXT"])?></a>
 		<?endif?>
 	<?endforeach;?>
 </nav>
