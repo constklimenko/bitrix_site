@@ -14,22 +14,29 @@ IncludeTemplateLangFile(__FILE__);
     <?$APPLICATION->ShowTitle()?>
   </title>
 
+  <? use Bitrix\Main\Page\Asset;?>
+
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet">
 
-  <!-- <? $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'css/normalize.min.css');?>
-  <? $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'css/font-awesome.min.css');?>
-  <? $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'css/animate.css');?>
-  <? $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'css/templatemo-misc.css');?>
-  <? $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'css/templatemo-style.css');?> -->
-  <link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH ?>/css/bootstrap.css">
-  <link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH ?>/css/normalize.min.css">
-  <link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH ?>/css/animate.css">
-  <link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH ?>/css/templatemo-misc.css">
-  <link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH ?>/css/templatemo-style.css">
+  <? Asset::getInstance() -> AddCss( SITE_TEMPLATE_PATH . "/css/bootstrap.css");
 
 
 
-  <script src="<?=SITE_TEMPLATE_PATH ?>/js/vendor/modernizr-2.6.2.min.js"></script>
+  Asset::getInstance() -> AddCss( SITE_TEMPLATE_PATH . "/css/normalize.min.css");
+  Asset::getInstance() -> AddCss( SITE_TEMPLATE_PATH . "/css/font-awesome.min.css");
+  
+  Asset::getInstance() -> AddCss( SITE_TEMPLATE_PATH . "/css/animate.css");
+  Asset::getInstance() -> AddCss( SITE_TEMPLATE_PATH . "/css/templatemo-misc.css");
+  Asset::getInstance() -> AddCss( SITE_TEMPLATE_PATH . "/css/templatemo-style.css");
+  Asset::getInstance() -> AddJs( SITE_TEMPLATE_PATH . "/js/vendor/modernizr-2.6.2.min.js");
+  Asset::getInstance() -> AddString('<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet">');
+  
+  CJSCore::Init(['jquery']);
+  ?>
+
+
+
+
 
 </head>
 
@@ -145,7 +152,20 @@ IncludeTemplateLangFile(__FILE__);
           <!-- /.col-md-6 -->
           <div class="col-md-6 col-sm-5">
             <div class="notification">
-              <span>Free Shipping on any order above $50</span>
+              <?$APPLICATION->IncludeComponent(
+	"bitrix:main.include", 
+	"template1", 
+	array(
+		"AREA_FILE_SHOW" => "file",
+		"AREA_FILE_SUFFIX" => "inc",
+		"EDIT_TEMPLATE" => "",
+		"COMPONENT_TEMPLATE" => "template1",
+		"PATH" => "/include/subtitle.php"
+	),
+	false
+);?>
+
+
             </div>
           </div>
           <!-- /.col-md-6 -->

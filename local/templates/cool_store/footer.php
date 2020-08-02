@@ -134,7 +134,7 @@
 <!-- /.site-footer -->
 
 
-<script src="<?=SITE_TEMPLATE_PATH ?>/js/vendor/jquery-1.10.1.min.js"></script>
+
 <script>
 window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')
 </script>

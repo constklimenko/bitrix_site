@@ -2,22 +2,35 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
 ?>
-
 <div class="content-section">
   <div class="container">
     <div class="row">
       <div class="col-md-3">
         <div class="product-item-1">
           <div class="product-thumb">
-            <img src="<?=SITE_TEMPLATE_PATH ?>//images/gallery-image-1.jpg" alt="Product Title">
+            <img alt="Product Title" src="/local/templates/cool_store//images/gallery-image-1.jpg">
           </div>
           <!-- /.product-thumb -->
           <div class="product-content">
             <h5><a href="#">Kool Shirt</a></h5>
-            <span class="tagline">Partner Name</span>
-            <span class="price">$25.00</span>
-            <p>Doloremque quo possimus quas necessitatibus blanditiis excepturi. Commodi, sunt asperiores tenetur
-              deleniti labore!</p>
+
+            <?$APPLICATION->IncludeComponent(
+	"bitrix:main.include", 
+	"template1", 
+	array(
+		"AREA_FILE_SHOW" => "file",
+		"AREA_FILE_SUFFIX" => "inc",
+		"EDIT_TEMPLATE" => "",
+		"COMPONENT_TEMPLATE" => "template1",
+		"PATH" => "/include/partner.php"
+	),
+	false
+);?>
+
+            <p>
+              Doloremque quo possimus quas necessitatibus blanditiis excepturi. Commodi, sunt asperiores tenetur
+              deleniti labore!
+            </p>
           </div>
           <!-- /.product-content -->
         </div>
@@ -28,35 +41,36 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
         <div class="product-holder">
           <div class="product-item-2">
             <div class="product-thumb">
-              <img src="<?=SITE_TEMPLATE_PATH ?>/images/featured/1.jpg" alt="Product Title">
+              <img alt="Product Title" src="/local/templates/cool_store/images/featured/1.jpg">
             </div>
             <!-- /.product-thumb -->
             <div class="product-content overlay">
               <h5><a href="#">Kooler Shirt</a></h5>
-              <span class="tagline">Partner Name</span>
-              <span class="price">$30.00</span>
-              <p>Doloremque quo possimus quas necessitatibus blanditiis excepturi. Commodi, sunt tenetur deleniti
-                labore!</p>
+              <span class="tagline">Partner Name</span> <span class="price">$30.00</span>
+              <p>
+                Doloremque quo possimus quas necessitatibus blanditiis excepturi. Commodi, sunt tenetur deleniti labore!
+              </p>
             </div>
             <!-- /.product-content -->
           </div>
           <!-- /.product-item-2 -->
           <div class="product-item-2">
             <div class="product-thumb">
-              <img src="<?=SITE_TEMPLATE_PATH ?>/images/featured/2.jpg" alt="Product Title">
+              <img alt="Product Title" src="/local/templates/cool_store/images/featured/2.jpg">
             </div>
             <!-- /.product-thumb -->
             <div class="product-content overlay">
               <h5><a href="#">Koolest Shirt</a></h5>
-              <span class="tagline">Partner Name</span>
-              <span class="price">$45.00</span>
-              <p>Doloremque quo possimus quas necessitatibus blanditiis excepturi. Commodi, sunt tenetur deleniti
-                labore!</p>
+              <span class="tagline">Partner Name</span> <span class="price">$45.00</span>
+              <p>
+                Doloremque quo possimus quas necessitatibus blanditiis excepturi. Commodi, sunt tenetur deleniti labore!
+              </p>
             </div>
             <!-- /.product-content -->
           </div>
           <!-- /.product-item-2 -->
-          <div class="clearfix"></div>
+          <div class="clearfix">
+          </div>
         </div>
         <!-- /.product-holder -->
       </div>
@@ -64,15 +78,14 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
       <div class="col-md-4">
         <div class="product-item-3">
           <div class="product-thumb">
-            <img src="<?=SITE_TEMPLATE_PATH ?>/images/featured/6.jpg" alt="">
+            <img src="/local/templates/cool_store/images/featured/6.jpg" alt="">
           </div>
           <!-- /.product-thumb -->
           <div class="product-content">
             <div class="row">
               <div class="col-md-6 col-sm-6">
                 <h5><a href="#">Name Of Shirt</a></h5>
-                <span class="tagline">Partner Name</span>
-                <span class="price">$20.00</span>
+                <span class="tagline">Partner Name</span> <span class="price">$20.00</span>
               </div>
               <!-- /.col-md-6 -->
               <div class="col-md-6 col-sm-6">
@@ -128,14 +141,15 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
       <div class="col-md-4 col-sm-6 col-xs-12">
         <div class="product-item-4">
           <div class="product-thumb">
-            <img src="<?=SITE_TEMPLATE_PATH ?>/images/featured/3.jpg" alt="Product Title">
+            <img alt="Product Title" src="/local/templates/cool_store/images/featured/3.jpg">
           </div>
           <!-- /.product-thumb -->
           <div class="product-content overlay">
             <h5><a href="#">Name Of Shirt</a></h5>
-            <span class="tagline">Partner Name</span>
-            <span class="price">$60.00</span>
-            <p>Doloremque quo possimus quas necessitatibus.</p>
+            <span class="tagline">Partner Name</span> <span class="price">$60.00</span>
+            <p>
+              Doloremque quo possimus quas necessitatibus.
+            </p>
           </div>
           <!-- /.product-content -->
         </div>
@@ -145,14 +159,15 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
       <div class="col-md-4 col-sm-6 col-xs-12">
         <div class="product-item-4">
           <div class="product-thumb">
-            <img src="<?=SITE_TEMPLATE_PATH ?>/images/featured/4.jpg" alt="Product Title">
+            <img alt="Product Title" src="/local/templates/cool_store/images/featured/4.jpg">
           </div>
           <!-- /.product-thumb -->
           <div class="product-content overlay">
             <h5><a href="#">Name Of Shirt</a></h5>
-            <span class="tagline">Partner Name</span>
-            <span class="price">$30.00</span>
-            <p>Doloremque quo possimus quas necessitatibus.</p>
+            <span class="tagline">Partner Name</span> <span class="price">$30.00</span>
+            <p>
+              Doloremque quo possimus quas necessitatibus.
+            </p>
           </div>
           <!-- /.product-content -->
         </div>
@@ -161,7 +176,7 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
       <!-- /.col-md-4 -->
       <div class="col-md-4 col-sm-12 col-xs-12">
         <div class="ads-placemenet">
-          <img src="<?=SITE_TEMPLATE_PATH ?>/images/featured/5.jpg" alt="">
+          <img src="/local/templates/cool_store/images/featured/5.jpg" alt="">
         </div>
         <!-- /.ads-placement -->
       </div>
@@ -172,7 +187,6 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
   <!-- /.container -->
 </div>
 <!-- /.content-section -->
-
 <div class="content-section">
   <div class="container">
     <div class="row">
@@ -186,7 +200,7 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
       <div class="col-md-3 col-sm-6">
         <div class="product-item">
           <div class="product-thumb">
-            <img src="<?=SITE_TEMPLATE_PATH ?>/images/gallery-image-2.jpg" alt="">
+            <img src="/local/templates/cool_store/images/gallery-image-2.jpg" alt="">
           </div>
           <!-- /.product-thum -->
           <div class="product-content">
@@ -201,7 +215,7 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
       <div class="col-md-3 col-sm-6">
         <div class="product-item">
           <div class="product-thumb">
-            <img src="<?=SITE_TEMPLATE_PATH ?>/images/gallery-image-3.jpg" alt="">
+            <img src="/local/templates/cool_store/images/gallery-image-3.jpg" alt="">
           </div>
           <!-- /.product-thum -->
           <div class="product-content">
@@ -216,7 +230,7 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
       <div class="col-md-3 col-sm-6">
         <div class="product-item">
           <div class="product-thumb">
-            <img src="<?=SITE_TEMPLATE_PATH ?>/images/gallery-image-4.jpg" alt="">
+            <img src="/local/templates/cool_store/images/gallery-image-4.jpg" alt="">
           </div>
           <!-- /.product-thum -->
           <div class="product-content">
@@ -231,7 +245,7 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
       <div class="col-md-3 col-sm-6">
         <div class="product-item">
           <div class="product-thumb">
-            <img src="<?=SITE_TEMPLATE_PATH ?>/images/gallery-image-5.jpg" alt="">
+            <img src="/local/templates/cool_store/images/gallery-image-5.jpg" alt="">
           </div>
           <!-- /.product-thum -->
           <div class="product-content">
@@ -249,7 +263,6 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
   <!-- /.container -->
 </div>
 <!-- /.content-section -->
-
 <div class="content-section">
   <div class="container">
     <div class="row">
@@ -263,7 +276,7 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
       <div class="col-md-3 col-sm-6">
         <div class="product-item-vote">
           <div class="product-thumb">
-            <img src="<?=SITE_TEMPLATE_PATH ?>/images/products/1.jpg" alt="">
+            <img src="/local/templates/cool_store/images/products/1.jpg" alt="">
           </div>
           <!-- /.product-thum -->
           <div class="product-content">
@@ -273,14 +286,16 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
               <li>
                 <div class="progress">
                   <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
-                    style="width: 40%;"></div>
+                    style="width: 40%;">
+                  </div>
                   <span>4<i class="fa fa-heart"></i></span>
                 </div>
               </li>
               <li>
                 <div class="progress">
                   <div class="progress-bar comments" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                    aria-valuemax="100" style="width: 60%;"></div>
+                    aria-valuemax="100" style="width: 60%;">
+                  </div>
                   <span class="comments">6<i class="fa fa-heart"></i></span>
                 </div>
               </li>
@@ -294,7 +309,7 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
       <div class="col-md-3 col-sm-6">
         <div class="product-item-vote">
           <div class="product-thumb">
-            <img src="<?=SITE_TEMPLATE_PATH ?>/images/products/2.jpg" alt="">
+            <img src="/local/templates/cool_store/images/products/2.jpg" alt="">
           </div>
           <!-- /.product-thum -->
           <div class="product-content">
@@ -304,14 +319,16 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
               <li>
                 <div class="progress">
                   <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
-                    style="width: 40%;"></div>
+                    style="width: 40%;">
+                  </div>
                   <span>4<i class="fa fa-heart"></i></span>
                 </div>
               </li>
               <li>
                 <div class="progress">
                   <div class="progress-bar comments" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                    aria-valuemax="100" style="width: 60%;"></div>
+                    aria-valuemax="100" style="width: 60%;">
+                  </div>
                   <span class="comments">6<i class="fa fa-heart"></i></span>
                 </div>
               </li>
@@ -325,7 +342,7 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
       <div class="col-md-3 col-sm-6">
         <div class="product-item-vote">
           <div class="product-thumb">
-            <img src="<?=SITE_TEMPLATE_PATH ?>/images/products/3.jpg" alt="">
+            <img src="/local/templates/cool_store/images/products/3.jpg" alt="">
           </div>
           <!-- /.product-thum -->
           <div class="product-content">
@@ -335,14 +352,16 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
               <li>
                 <div class="progress">
                   <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
-                    style="width: 40%;"></div>
+                    style="width: 40%;">
+                  </div>
                   <span>4<i class="fa fa-heart"></i></span>
                 </div>
               </li>
               <li>
                 <div class="progress">
                   <div class="progress-bar comments" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                    aria-valuemax="100" style="width: 60%;"></div>
+                    aria-valuemax="100" style="width: 60%;">
+                  </div>
                   <span class="comments">6<i class="fa fa-heart"></i></span>
                 </div>
               </li>
@@ -356,7 +375,7 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
       <div class="col-md-3 col-sm-6">
         <div class="product-item-vote">
           <div class="product-thumb">
-            <img src="<?=SITE_TEMPLATE_PATH ?>/images/products/4.jpg" alt="">
+            <img src="/local/templates/cool_store/images/products/4.jpg" alt="">
           </div>
           <!-- /.product-thum -->
           <div class="product-content">
@@ -366,14 +385,16 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
               <li>
                 <div class="progress">
                   <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
-                    style="width: 40%;"></div>
+                    style="width: 40%;">
+                  </div>
                   <span>4<i class="fa fa-heart"></i></span>
                 </div>
               </li>
               <li>
                 <div class="progress">
                   <div class="progress-bar comments" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                    aria-valuemax="100" style="width: 60%;"></div>
+                    aria-valuemax="100" style="width: 60%;">
+                  </div>
                   <span class="comments">6<i class="fa fa-heart"></i></span>
                 </div>
               </li>
@@ -390,6 +411,4 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
   <!-- /.container -->
 </div>
 <!-- /.content-section -->
-
-
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
