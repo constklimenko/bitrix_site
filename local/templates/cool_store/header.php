@@ -50,13 +50,13 @@ IncludeTemplateLangFile(__FILE__);
 
   <?if($USER->IsAdmin()):?>
 
-  <div style="">
+  <div>
     <form action="/bitrix/admin/site_edit.php" method="GET">
-      <input type="hidden" name="LID" value="<?=SITE_ID?>" />
+      <input type="hidden" name="LID" value="<?= SITE_ID ?>" />
       <p>
-        <font style="color:red">
+        <span style="color:red">
           <?echo GetMessage("DEF_TEMPLATE_NF")?>
-        </font>
+        </span>
       </p>
       <input type="submit" name="set_template" value="<?echo GetMessage(" DEF_TEMPLATE_NF_SET")?>" />
     </form>
@@ -115,19 +115,22 @@ IncludeTemplateLangFile(__FILE__);
           </div>
           <!-- /.col-md-4 -->
           <div class="col-md-8 col-sm-6 col-xs-4">
-            <div class="main-menu">
-              <a href="#" class="toggle-menu">
-                <i class="fa fa-bars"></i>
-              </a>
-              <ul class="menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Catalogs</a></li>
-                <li><a href="#">FAQs</a></li>
-                <li><a href="#">Policies</a></li>
-                <li><a href="#">About</a></li>
-              </ul>
-            </div>
-            <!-- /.main-menu -->
+          
+         
+<div class="content-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="product-item-1">
+					<div class="product-thumb">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+          
           </div>
           <!-- /.col-md-8 -->
         </div>
@@ -141,11 +144,25 @@ IncludeTemplateLangFile(__FILE__);
         <div class="row">
           <div class="col-md-6 col-sm-7">
             <div class="list-menu">
-              <ul>
-                <li><a href="">Shop</a></li>
-                <li><a href="">Details</a></li>
-                <li><a href="">Contact</a></li>
-              </ul>
+            <?$APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"top_menu", 
+	array(
+		"COMPONENT_TEMPLATE" => "top_menu",
+		"ROOT_MENU_TYPE" => "top",
+		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MAX_LEVEL" => "1",
+		"CHILD_MENU_TYPE" => "bottom",
+		"USE_EXT" => "Y",
+		"DELAY" => "N",
+		"ALLOW_MULTI_SELECT" => "N"
+	),
+	false
+);?>
             </div>
             <!-- /.list-menu -->
           </div>

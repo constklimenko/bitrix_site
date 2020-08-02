@@ -1,50 +1,29 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Как купить", 
-		"about/howto/", 
+		"Home", 
+		"/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Доставка", 
-		"about/delivery/", 
+		"Contacts", 
+		"/contacts/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"О магазине", 
-		"about/", 
+		"Shop", 
+		"/shop/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Гарантия", 
-		"about/guaranty/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Контакты", 
-		"about/contacts/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Мой кабинет", 
-		"personal/", 
-		Array(), 
-		Array(), 
-		"CUser::IsAuthorized()" 
-	),
-	Array(
-		"Отдых", 
-		"/rest/", 
+		"Details", 
+		"/details/", 
 		Array(), 
 		Array(), 
 		"" 
