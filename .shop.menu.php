@@ -1,0 +1,39 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"New Arrivals", 
+		"", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"men", 
+		"", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"woomen", 
+		"", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"kids", 
+		"", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Accessories", 
+		"#", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

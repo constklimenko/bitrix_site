@@ -17,56 +17,88 @@
             <div class="footer_top">
                 <div class="span_of_4">
                     <div class="col-md-3 span1_of_4">
-                        <h4>Shop</h4>
-                        <ul class="f_nav">
-                            <li><a href="#">new arrivals</a></li>
-                            <li><a href="#">men</a></li>
-                            <li><a href="#">women</a></li>
-                            <li><a href="#">accessories</a></li>
-                            <li><a href="#">kids</a></li>
-                            <li><a href="#">brands</a></li>
-                            <li><a href="#">trends</a></li>
-                            <li><a href="#">sale</a></li>
-                            <li><a href="#">style videos</a></li>
-                        </ul>
+                    <?$APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"shop_menu", 
+	array(
+		"ALLOW_MULTI_SELECT" => "N",
+		"CHILD_MENU_TYPE" => "left",
+		"DELAY" => "N",
+		"MAX_LEVEL" => "1",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"ROOT_MENU_TYPE" => "shop",
+		"USE_EXT" => "Y",
+		"COMPONENT_TEMPLATE" => "shop_menu"
+	),
+	false
+);?>
                     </div>
                     <div class="col-md-3 span1_of_4">
-                        <h4>help</h4>
-                        <ul class="f_nav">
-                            <li><a href="#">frequently asked  questions</a></li>
-                            <li><a href="#">men</a></li>
-                            <li><a href="#">women</a></li>
-                            <li><a href="#">accessories</a></li>
-                            <li><a href="#">kids</a></li>
-                            <li><a href="#">brands</a></li>
-                        </ul>
+                    <?$APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"help_menu", 
+	array(
+		"ALLOW_MULTI_SELECT" => "N",
+		"CHILD_MENU_TYPE" => "left",
+		"DELAY" => "N",
+		"MAX_LEVEL" => "1",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"ROOT_MENU_TYPE" => "Help",
+		"USE_EXT" => "Y",
+		"COMPONENT_TEMPLATE" => "help_menu"
+	),
+	false
+);?>
                     </div>
                     <div class="col-md-3 span1_of_4">
-                        <h4>account</h4>
-                        <ul class="f_nav">
-                            <li><a href="account.html">login</a></li>
-                            <li><a href="register.html">create an account</a></li>
-                            <li><a href="#">create wishlist</a></li>
-                            <li><a href="checkout.html">my shopping bag</a></li>
-                            <li><a href="#">brands</a></li>
-                            <li><a href="#">create wishlist</a></li>
-                        </ul>
+                    <?$APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"account_menu", 
+	array(
+		"ALLOW_MULTI_SELECT" => "N",
+		"CHILD_MENU_TYPE" => "left",
+		"DELAY" => "N",
+		"MAX_LEVEL" => "1",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"ROOT_MENU_TYPE" => "Help",
+		"USE_EXT" => "Y",
+		"COMPONENT_TEMPLATE" => "account_menu"
+	),
+	false
+);?>
                     </div>
                     <div class="col-md-3 span1_of_4">
-                        <h4>popular</h4>
-                        <ul class="f_nav">
-                            <li><a href="#">new arrivals</a></li>
-                            <li><a href="#">men</a></li>
-                            <li><a href="#">women</a></li>
-                            <li><a href="#">accessories</a></li>
-                            <li><a href="#">kids</a></li>
-                            <li><a href="#">brands</a></li>
-                            <li><a href="#">trends</a></li>
-                            <li><a href="#">sale</a></li>
-                            <li><a href="#">style videos</a></li>
-                            <li><a href="#">login</a></li>
-                            <li><a href="#">brands</a></li>
-                        </ul>
+                    <?$APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"popular_menu", 
+	array(
+		"ALLOW_MULTI_SELECT" => "N",
+		"CHILD_MENU_TYPE" => "left",
+		"DELAY" => "N",
+		"MAX_LEVEL" => "1",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"ROOT_MENU_TYPE" => "Help",
+		"USE_EXT" => "Y",
+		"COMPONENT_TEMPLATE" => "popular_menu"
+	),
+	false
+);?>
                     </div>
                     <div class="clearfix"></div>
                 </div>
