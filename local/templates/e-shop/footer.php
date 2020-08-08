@@ -61,7 +61,7 @@
                     <div class="col-md-3 span1_of_4">
                     <?$APPLICATION->IncludeComponent(
 	"bitrix:menu", 
-	"account_menu", 
+	"popular_menu", 
 	array(
 		"ALLOW_MULTI_SELECT" => "N",
 		"CHILD_MENU_TYPE" => "left",
@@ -72,9 +72,9 @@
 		"MENU_CACHE_TIME" => "3600",
 		"MENU_CACHE_TYPE" => "N",
 		"MENU_CACHE_USE_GROUPS" => "Y",
-		"ROOT_MENU_TYPE" => "Help",
+		"ROOT_MENU_TYPE" => "Account",
 		"USE_EXT" => "Y",
-		"COMPONENT_TEMPLATE" => "account_menu"
+		"COMPONENT_TEMPLATE" => "popular_menu"
 	),
 	false
 );?>

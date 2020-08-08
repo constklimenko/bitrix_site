@@ -1,0 +1,32 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"j;bldmb", 
+		"#", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"men", 
+		"#", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"woomen", 
+		"#", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"kids", 
+		"#", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>
